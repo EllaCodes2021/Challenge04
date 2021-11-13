@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <title>JavaScript Quiz</title>
+</head>
+<body>
+    <div class="start show" id="start">
+        <h1>Lets Take a Quiz</h1>
+        <button id="start-btn">OK!</button>
+    </div>
+    <div class="panel hidden" id="panel">
+        <div class="result">
+
+        </div>
+        <div class="question-container" id="question">
+            Question goes here.
+        </div>
+        <div class="option-container">
+            <button class="option btn" onclick="" id="op1" >option1</button>
+            <button class="option btn" id="op2" >option2</button>
+            <button class="option btn" id="op3">option3</button>
+            <button class="option btn" id="op4">option4</button>
+        </div>
+        <div class="navigation">
+            <button class="evaluate btn">Check Answer</button>
+            <button class="next btn">Next</button>
+        </div>
+    </div>
+        <div id="timer">
+            <div id="counter"></div>
+            <div id="btimeGauge"></div>
+            <div id="timeGauge"></div>
+        </div>
+        <div id="progress"></div>
+        <div id="score container" style="display: none;"></div>
+
+    </div>
+    <script src="./assets/JavaScript/srcipt.js"></script>
+</body>
+</html>
