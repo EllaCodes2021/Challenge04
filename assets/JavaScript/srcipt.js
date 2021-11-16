@@ -12,7 +12,7 @@ var scoreDiv = document.getElementById("scoreContainer");
 var score=0;
 
 
-var Quesions = [
+var Questions = [
     {
         id:0,
         q : "JavaScript is what type of language?",
@@ -226,16 +226,16 @@ function iterate(id){
 
     const question = document.getElementById("question");
 
-    question.innerText =  Quesions[id].q
+    question.innerText =  Questions[id].q
 
     const op1 = document.getElementById('op1');
     const op2 = document.getElementById('op2');
     const op3 = document.getElementById('op3');
     const op4 = document.getElementById('op4');
-    op1.innerText = Questions[id].a[A].text;
-    op2.innerText = Questions[id].a[B].text;
-    op3.innerText = Questions[id].a[C].text;
-    op4.innerText = Questions[id].a[D].text;
+    op1.innerText = Questions[id].a[0].A;
+    op2.innerText = Questions[id].a[1].B;
+    op3.innerText = Questions[id].a[2].C;
+    op4.innerText = Questions[id].a[3].D;
     op1.value = Questions[id].a[0].isCorrect;
     op2.value = Questions[id].a[1].isCorrect;
     op3.value = Questions[id].a[2].isCorrect;
@@ -277,15 +277,31 @@ function iterate(id){
         if (selected == "true") {
             result[0].innerHTML = "You are Correct";
             result[0].style.color = "#3cb84d";
+            op4.style.backgroundColor = "rgb(60, 171, 199)";
+            op2.style.backgroundColor = "rgb(60, 171, 199)";
+            op3.style.backgroundColor = "rgb(60, 171, 199)";
+            op1.style.backgroundColor = "rgb(60, 171, 199)";
+    
         }else{
             result[0].innerHTML = "Oops wrong answer";
             result[0].style.color = "#BF3325";
+            op4.style.backgroundColor = "rgb(60, 171, 199)";
+            op2.style.backgroundColor = "rgb(60, 171, 199)";
+            op3.style.backgroundColor = "rgb(60, 171, 199)";
+            op1.style.backgroundColor = "rgb(60, 171, 199)";
+        
+        }
+        start= false;
+        if (id< 19){
+            id++;
+            iterate(id);
+            console.log(id);
         }
     })
 
-    if (start) {
-        iterate("0");
-    }
+    // if (start) {
+    //     iterate("0");
+    // }
 }
 const next = document.getElementsByClassName('next')[0];
 var id=0;
